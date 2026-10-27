@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Data Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <header class="intro">
+            <p class="eyebrow">MUSIC DATA WORKSHOP</p>
+            <h1>Music Data Explorer</h1>
+            <p class="subtitle">Explore popular tracks, artists, genres and music features.</p>
+        </header>
+
+        <section class="summary" aria-label="Dataset summary">
+            <div class="summary-card">
+                <span class="summary-label">Tracks shown</span>
+                <strong id="trackCount">Loading…</strong>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Average popularity</span>
+                <strong id="averagePopularity">—</strong>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Track data</h2>
+                    <p>First 20 rows from the selected dataset.</p>
+                </div>
+                <input id="searchInput" type="search" placeholder="Search tracks or artists…" aria-label="Search tracks or artists">
+            </div>
+            <div class="table-wrap">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Track name</th>
+                            <th>Artist</th>
+                            <th>Genre</th>
+                            <th>Popularity</th>
+                            <th>Danceability</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="5">Loading data…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p id="statusMessage" class="status" role="status"></p>
+        </section>
+
+        <footer>
+            <p>Dataset file: <code>musicdata.csv</code></p>
+            <p class="source-note">Original dataset source: add the source webpage URL here before submitting.</p>
+        </footer>
+    </main>
+</body>
+</html>
